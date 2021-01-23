@@ -18,4 +18,3 @@ class NoteFormatter
     "Title: #{note.title}\n#{note.body}"
   end
 end
-

@@ -21,3 +21,14 @@ describe Note do
     end
   end
 end
+
+describe NoteFormatter do
+
+  it 'formats the note with a new line between the title and end the body' do
+    note = Note.new('This', 'That')
+    # or
+    # with the use of double
+    # note = double('Note', :title => 'Today\'s errands', :body => 'I need to mop, cook')
+    expect(subject.format(note)).to eq "Title: This""\n""That"
+  end
+end
